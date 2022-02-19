@@ -45,24 +45,24 @@ XOR the key
     }
 
 Here are the potential keys based on the diffrent file signatures:
-$ xor FFD8FFDB b9140645
-46ccf99e
-$ xor FFD8FFEE b9140645
-46ccf9ab
-$ xor FFD8FFE000104A4649460001 b914064571e0b5f73707cb85
-46ccf9a571f0ffb17e41cb84
+  $ xor FFD8FFDB b9140645
+  46ccf99e
+  $ xor FFD8FFEE b9140645
+  46ccf9ab
+  $ xor FFD8FFE000104A4649460001 b914064571e0b5f73707cb85
+  46ccf9a571f0ffb17e41cb84
 
 Let's dump the encrypted file into a one line file called hex.
     
     $ xxd -p my_magic_bytes.jpg.enc | tr -d '\n' > hex
 
-Next let's try out diffrent keys.
+*Next let's try out diffrent keys.*
 
-$ python XOR-hex.py hex 46ccf99e | xxd -r -p > image1.jpg; file image.jpg
-image1.jpg: JPEG image data
-$ python XOR-hex.py hex 46ccf9ab | xxd -r -p > image2.jpg; file image.jpg
-image.jpg: JPEG image data
-$ python XOR-hex.py hex 46ccf9a571f0ffb17e41cb84 | xxd -r -p > image3.jpg; file image3.jpg
+  $ python XOR-hex.py hex 46ccf99e | xxd -r -p > image1.jpg; file image.jpg
+  image1.jpg: JPEG image data
+  $ python XOR-hex.py hex 46ccf9ab | xxd -r -p > image2.jpg; file image.jpg
+  image.jpg: JPEG image data
+  $ python XOR-hex.py hex 46ccf9a571f0ffb17e41cb84 | xxd -r -p > image3.jpg; file image3.jpg
 image3.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, progressive, precision 8, 500x500, components 3
 
 - The file with most information is likely out answer. Checking through, image1, image2, doesn't contain any information but image3 it contains the flag.
