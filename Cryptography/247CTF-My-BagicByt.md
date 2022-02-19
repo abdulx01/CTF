@@ -44,7 +44,8 @@ XOR the key
     paste -s -d '\0' - # join all the blocks back into to a big hex string
     }
 
-Here are the potential keys based on the diffrent file signatures:
+#Here are the potential keys based on the diffrent file signatures:
+
       $ xor FFD8FFDB b9140645
       46ccf99e
       $ xor FFD8FFEE b9140645
@@ -52,7 +53,7 @@ Here are the potential keys based on the diffrent file signatures:
       $ xor FFD8FFE000104A4649460001 b914064571e0b5f73707cb85
       46ccf9a571f0ffb17e41cb84
 
-Let's dump the encrypted file into a one line file called hex.
+#Let's dump the encrypted file into a one line file called hex.
     
     $ xxd -p my_magic_bytes.jpg.enc | tr -d '\n' > hex
 
