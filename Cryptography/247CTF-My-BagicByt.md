@@ -21,7 +21,7 @@ Solution:
 ### XOR the key
 ---------------
 
-   **Here's a bash XOR [function](https://stackoverflow.com/questions/48620882/how-to-xor-two-hex-numbers-in-bash-script-xor-encryption/55986217#55986217):
+   **Here's a bash XOR [function](https://stackoverflow.com/questions/48620882/how-to-xor-two-hex-numbers-in-bash-script-xor-encryption/55986217#55986217):**
 
      xor() {
     {
@@ -56,7 +56,7 @@ Solution:
 ## Let's dump the encrypted file into a one line file called hex.
     
     $ xxd -p my_magic_bytes.jpg.enc | tr -d '\n' > hex
-** Now Let's modify a Python script from [Open-Tech-Notes](https://opentechnotes.blogspot.com/2014/08/xor-string-with-key-in-python.html) to XOR a string or file with a key.**
+**Now Let's modify a Python script from [Open-Tech-Notes](https://opentechnotes.blogspot.com/2014/08/xor-string-with-key-in-python.html) to XOR a string or file with a key.**
     
     from itertools import cycle
     import sys
