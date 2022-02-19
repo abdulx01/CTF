@@ -18,10 +18,10 @@ Solution:
         $ xxd my_magic_bytes.jpg.enc|head -n 1
         00000000: b914 0645 71e0 b5f7 3707 cb85 47cc f9a4  ...Eq...7...G...
     
-XOR the key
-------------
+### XOR the key
+---------------
 
-    Here's a bash XOR function:
+   **Here's a bash XOR [function](https://stackoverflow.com/questions/48620882/how-to-xor-two-hex-numbers-in-bash-script-xor-encryption/55986217#55986217):
 
      xor() {
     {
@@ -56,7 +56,25 @@ XOR the key
 ## Let's dump the encrypted file into a one line file called hex.
     
     $ xxd -p my_magic_bytes.jpg.enc | tr -d '\n' > hex
+** Now Let's modify a Python script from [Open-Tech-Notes](https://opentechnotes.blogspot.com/2014/08/xor-string-with-key-in-python.html) to XOR a string or file with a key.**
+    
+    from itertools import cycle
+    import sys
 
+    def do_xor(key, message):
+        message = message.replace(' ', '').decode('hex')
+        key = ''.join(key.split()[::-1]).decode('hex')
+
+        return ''.join([chr(ord(a) ^ ord(b)) for a,b in zip(message, cycle(key))])
+
+    msg_file = sys.argv[1]
+    key = sys.argv[2]
+
+    with open(msg_file, 'rb') as f:
+        message  = f.read()
+    f.close()
+
+    print do_xor(key,message).encode("hex")
 **Next let's try out diffrent keys.**
 
     $ python XOR-hex.py hex 46ccf99e | xxd -r -p > image1.jpg; file image.jpg
