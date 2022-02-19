@@ -1,4 +1,4 @@
-                                             247/CTF - My Magic Bytes: Cryptography
+                                            # 247/CTF - My Magic Bytes: Cryptography
 
 Challenge:
 - Can you recover the secret XOR key we used to encrypt the flag?
