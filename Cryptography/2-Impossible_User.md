@@ -1,7 +1,7 @@
 #               The Impossible User
 
-### This encryption service will encrypt almost any plaintext. Can you abuse the implementation
-    to actually encrypt every plaintext.
+This encryption service will encrypt almost any plaintext. Can you abuse the implementation
+to actually encrypt every plaintext.
 
 ## Code
 '''
