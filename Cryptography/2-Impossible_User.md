@@ -4,7 +4,7 @@ This encryption service will encrypt almost any plaintext. Can you abuse the imp
 to actually encrypt every plaintext.
 
 ## Code
-'''
+'''Python
 from Crypto.Cipher import AES
 from flask import Flask, request
 from secret import flag, aes_key, secret_key
