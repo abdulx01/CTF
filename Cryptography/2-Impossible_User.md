@@ -57,7 +57,7 @@ if __name__ == "__main__":
 ```
 
 ## What we need to do?
-   We need to use 'encrypt()' function to encrypt hex value of the string 'impossible_flag_user' and use the encode output with function get_flag() to obtain the flag. Unfortunatly we can see that program will not let us encrypt hex value of 'impossible_flag_user' string directly - 'if user == flag_user': return 'No cheating!'. There has to be another way.
+   We need to use 'encrypt()' function to encrypt hex value of the string ```impossible_flag_user``` and use the encode output with function ```get_flag()``` to obtain the flag. Unfortunatly we can see that program will not let us encrypt hex value of ```impossible_flag_user``` string directly - ```if user == flag_user```: return ```No cheating!```. There has to be another way.
 
 ## ECB - Electronic Code Book
     The simplest of the encryption modes is the Electronic Codebook (ECB) mode (named after conventional physical codebooks[9]). The message is divided into blocks, and each block is encrypted separately.
