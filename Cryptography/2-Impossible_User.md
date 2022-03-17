@@ -121,8 +121,8 @@ We need to fill that two block with our own padding data, and the encrypted data
 
 The last 32 bytes are the encrypted value of string 'impossible_flag_user' that we need.
 
-We can see that only the first 32 bytes are changing and the last 32 stay the same, so our theory is okay. We can now copy the last 32 bytes and fill them in the get_flag() function to obtain the flag:
+We can see that only the first 32 bytes are changing and the last 32 stay the same, so our theory is okay. We can now copy the last 32 bytes and fill them in the __get_flag()__ function to obtain the flag:
 
     $ curl https://345a7860397bb4fb.247ctf.com/get_flag\?user=939454b054b7379b0709a270b894025c707ece4f0913868ec5df07d131b0822d
 
-""Now you got flag!""
+**Now you got flag!**
