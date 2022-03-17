@@ -68,22 +68,22 @@ if __name__ == "__main__":
 
 ## How to ?
 
-""Let's convert the string we need to encode to get the flag impossible_flag_user tp hex"".
+**Let's convert the string we need to encode to get the flag impossible_flag_user tp hex**.
     
     >>> "impossible_flag_user".encode("utf-8").hex()
     '696d706f737369626c655f666c61675f75736572'
 
-By the way, you can go the other way in python with:
+**By the way, you can go the other way in python with**:
 
     >>> print(bytes.fromhex('696d706f737369626c655f666c61675f75736572'))
     b'impossible_flag_user'
 
-So if I try to encrypt this hex.
+**So if I try to encrypt this hex**.
 
     $ curl https://345a7860397bb4fb.247ctf.com/encrypt\?user=696d706f737369626c655f666c61675f75736572
     No cheating!%
 
-"I fail!"
+```I fail!```
 So We need to find a way to encrypt this hex.
 
 ## Block length in ECB
