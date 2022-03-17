@@ -4,7 +4,8 @@ This encryption service will encrypt almost any plaintext. Can you abuse the imp
 to actually encrypt every plaintext.
 
 ## Code
-'''Python
+
+```Python
 from Crypto.Cipher import AES
 from flask import Flask, request
 from secret import flag, aes_key, secret_key
@@ -53,7 +54,7 @@ def get_flag():
 
 if __name__ == "__main__":
   app.run()
-'''
+```
 
 ## What we need to do?
    We need to use 'encrypt()' function to encrypt hex value of the string 'impossible_flag_user' and use the encode output with function get_flag() to obtain the flag. Unfortunatly we can see that program will not let us encrypt hex value of 'impossible_flag_user' string directly - 'if user == flag_user': return 'No cheating!'. There has to be another way.
