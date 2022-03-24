@@ -58,7 +58,7 @@ Solution:
     $ xxd -p my_magic_bytes.jpg.enc | tr -d '\n' > hex
 **Now Let's modify a Python script from [Open-Tech-Notes](https://opentechnotes.blogspot.com/2014/08/xor-string-with-key-in-python.html) to XOR a string or file with a key.**
     
-    ```Python
+```Python
     from itertools import cycle
     import sys
 
@@ -76,7 +76,7 @@ Solution:
     f.close()
 
     print do_xor(key,message).encode("hex")
-    ```
+  ```
 **Next let's try out diffrent keys.**
 
     $ python XOR-hex.py hex 46ccf99e | xxd -r -p > image1.jpg; file image.jpg
